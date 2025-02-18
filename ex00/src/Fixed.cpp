@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 18:03:20 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/17 18:03:32 by chtan            ###   ########.fr       */
+/*   Updated: 2025/02/18 14:35:41 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed(void) {
 	std::cout << "Default constructor called" << std::endl;
-	this->_rawBits = 0;
+    setRawBits(0);
 	return ;
 }
 
