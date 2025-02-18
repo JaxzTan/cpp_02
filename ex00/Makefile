@@ -6,11 +6,11 @@
 #    By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/09 12:35:05 by chtan             #+#    #+#              #
-#    Updated: 2025/02/16 19:38:33 by chtan            ###   ########.fr        #
+#    Updated: 2025/02/18 13:21:56 by chtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	./BraiiiiiiinnnzzzZ
+NAME			=	./First_orth_class
 CXX				=	@c++
 CXXFLAGS		=	-Wall -Wextra -Werror -pedantic -std=c++98 -g3
 SRC				=	./src/*.cpp
@@ -20,7 +20,7 @@ OBJ_DIR			=	./obj
 # makefile-rules  								  			#
 # ------------------------------------------------------------------#
 all				:	$(NAME)
-					@echo "\033[0;32mBraiiiiiiinnnzzzZ is ready!\033[0m"
+					@echo "\033[0;32mProgram is ready!\033[0m"
 
 $(NAME)			:	$(SRC)
 	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $(SRC)
@@ -29,7 +29,9 @@ $(NAME)			:	$(SRC)
 
 clean			:
 	@rm -rf $(OBJ_DIR) && rm -rf ./*.o
-	@echo "\033[0;31mBraiiiiiiinnnzzzZ deleted successfully!\033[0m"
+	@echo "\033[0;31mProgram deleted successfully!\033[0m"
+	@sleep 0.5
+	@clear
 
 fclean			:	clean
 	@rm -rf $(NAME)
