@@ -6,7 +6,7 @@
 #    By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/09 12:35:05 by chtan             #+#    #+#              #
-#    Updated: 2025/02/18 13:21:56 by chtan            ###   ########.fr        #
+#    Updated: 2025/02/27 13:40:43 by chtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ OBJ_DIR			=	./obj
 # makefile-rules  								  			#
 # ------------------------------------------------------------------#
 all				:	$(NAME)
-					@echo "\033[0;32mProgram is ready!\033[0m"
+					@echo "\033[0;32mProgram is ready!\033[0m\n"
+
+					
 
 $(NAME)			:	$(SRC)
 	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $(SRC)
@@ -29,9 +31,8 @@ $(NAME)			:	$(SRC)
 
 clean			:
 	@rm -rf $(OBJ_DIR) && rm -rf ./*.o
-	@echo "\033[0;31mProgram deleted successfully!\033[0m"
-	@sleep 0.5
 	@clear
+	@echo "\033[0;31mProgram deleted successfully!\033[0m"
 
 fclean			:	clean
 	@rm -rf $(NAME)
@@ -40,4 +41,4 @@ fclean			:	clean
 re				:	fclean all
 
 run				: 
-	@reset && $(MAKE) -s re && $(NAME) && $(MAKE) -s fclean
+	@reset && $(MAKE) -s re && $(NAME)

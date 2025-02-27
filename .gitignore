@@ -46,10 +46,11 @@ megaphone
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
-Makefile
+
 compile_commands.json
 CTestTestfile.cmake
 Testing/
+First_orth_class
 
 # IDEs and editors
 .idea/
