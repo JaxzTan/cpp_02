@@ -1,8 +1,9 @@
 *.txt
 *.out
 .vscode
-megaphone
 *.objs
+Toward_fixed_point
+
 # Compiled object files
 *.o
 *.obj
