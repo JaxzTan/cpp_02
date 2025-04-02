@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 13:22:21 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/27 13:15:36 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/02 15:32:54 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 # define RESET_H "\033[0m"
 # define RED_H "\033[0;31m"
 # define BLUE_H "\033[0;34m"
+# define YELLOW_H "\033[0;33m"
+
 class	Fixed {
 
 	private:
 		int					_rawBits;
-		static const int	_fractBits = 8;
-
+    
         public:
         Fixed(void); // Default Constructor
         Fixed(const Fixed &toCopy); // Copy Constructor
