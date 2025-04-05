@@ -6,18 +6,21 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:08:02 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/18 17:54:27 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/05 13:05:45 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Fixed.hpp"
 
+// Default constructor
 Fixed::Fixed(void){
 	std::cout << "Default constructor called" << std::endl;
 	this->_rawBits = 0;
     return ;
 }
 
+// Int constructor
+// This constructor takes an integer and converts it to a fixed-point number
 Fixed::Fixed(const int nb) {
 	std::cout << "Int constructor called" << std::endl;
 	this->_rawBits = (nb * (1 << _fractBits));

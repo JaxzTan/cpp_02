@@ -6,7 +6,7 @@
 #    By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/09 12:35:05 by chtan             #+#    #+#              #
-#    Updated: 2025/02/18 17:54:55 by chtan            ###   ########.fr        #
+#    Updated: 2025/04/05 13:04:46 by chtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ OBJ_DIR			=	./obj
 # ------------------------------------------------------------------#
 all				:	$(NAME)
 					@echo "\033[0;32mProgram is ready!\033[0m"
+					@sleep 1
 
 $(NAME)			:	$(SRC)
 	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $(SRC)
@@ -40,4 +41,4 @@ fclean			:	clean
 re				:	fclean all
 
 run				: 
-	@reset && $(MAKE) -s re && $(NAME) && $(MAKE) -s fclean
+	@reset && $(MAKE) -s re && $(NAME)

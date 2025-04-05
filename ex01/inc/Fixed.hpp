@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 14:40:41 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/18 17:54:36 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/05 13:02:46 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define FIXED_HPP
 
 # include <iostream>
+
+# define GREEN_H "\033[0;32m"
+# define RESET_H "\033[0m"
+# define RED_H "\033[0;31m"
+# define BLUE_H "\033[0;34m"
+# define YELLOW_H "\033[0;33m"
 
 class	Fixed {
 
