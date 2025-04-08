@@ -6,7 +6,7 @@
 #    By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/09 12:35:05 by chtan             #+#    #+#              #
-#    Updated: 2025/02/18 18:26:19 by chtan            ###   ########.fr        #
+#    Updated: 2025/04/08 11:07:58 by chtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,4 +40,4 @@ fclean			:	clean
 re				:	fclean all
 
 run				: 
-	@reset && $(MAKE) -s re && $(NAME) && $(MAKE) -s fclean
+	@reset && $(MAKE) -s re && $(NAME)
