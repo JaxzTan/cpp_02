@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:08:02 by chtan             #+#    #+#             */
-/*   Updated: 2025/04/05 13:05:45 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/17 00:02:27 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Default constructor
 Fixed::Fixed(void){
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << GREEN_H << "Default constructor called" << RESET_H << std::endl;
 	this->_rawBits = 0;
     return ;
 }
@@ -22,25 +22,25 @@ Fixed::Fixed(void){
 // Int constructor
 // This constructor takes an integer and converts it to a fixed-point number
 Fixed::Fixed(const int nb) {
-	std::cout << "Int constructor called" << std::endl;
+	std::cout << GREEN_H <<"Int constructor called" << RESET_H <<std::endl;
 	this->_rawBits = (nb * (1 << _fractBits));
 	return ;
 }
 
 Fixed::Fixed(const float nb) {
-	std::cout << "Float constructor called" << std::endl;
+	std::cout << GREEN_H << "Float constructor called" << RESET_H << std::endl;
 	this->_rawBits = roundf(nb * (1 << _fractBits));
 	return ;
 }
 
 Fixed::Fixed(const Fixed &toCopy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << GREEN_H << "Copy constructor called"<< RESET_H << std::endl;
 	*this = toCopy;
 	return ;
 }
 
 Fixed &Fixed::operator=(const Fixed &rhs) {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << GREEN_H << "Copy assignment operator called" << RESET_H  << std::endl;
 	if (this == &rhs)
 		return (*this);
 	this->_rawBits = rhs.getRawBits();
@@ -48,7 +48,7 @@ Fixed &Fixed::operator=(const Fixed &rhs) {
 }
 
 Fixed::~Fixed(void) {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << RED_H << "Destructor called" << RESET_H << std::endl;
 	return ;
 }
 

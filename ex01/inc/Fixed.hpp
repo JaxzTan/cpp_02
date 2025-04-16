@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 14:40:41 by chtan             #+#    #+#             */
-/*   Updated: 2025/04/05 13:02:46 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/13 19:20:52 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class	Fixed {
 
 	public:
 		Fixed(void);
-		Fixed(const int nb);
-		Fixed(const float nb);
+		Fixed(const int nb);  // Parameterized constructor
+		Fixed(const float nb);  // Parameterized constructor
 		Fixed(const Fixed &toCopy);
 		Fixed &operator = (const Fixed &rhs);
 		~Fixed(void);
