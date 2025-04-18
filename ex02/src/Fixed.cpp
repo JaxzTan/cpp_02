@@ -6,13 +6,11 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:23:55 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/18 18:24:05 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/19 01:09:49 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Fixed.hpp"
-
-// ==================== CONSTRUCTORS ===================
 
 Fixed::Fixed(void) {
 	this->_rawBits = 0;
@@ -34,13 +32,9 @@ Fixed::Fixed(const Fixed &toCopy) {
 	return ;
 }
 
-// ==================== DESTRUCTOR ===================
-
 Fixed::~Fixed(void) {
 	return ;
 }
-
-// ==================== FUNCTIONS ===================
 
 int	Fixed::toInt(void) const {
 	return (this->_rawBits / (1 << this->_fractBits));
@@ -58,8 +52,6 @@ void	Fixed::setRawBits(const int raw) {
 	this->_rawBits = raw;
 	return ;
 }
-
-// ==================== OPERATORS ====================
 
 Fixed &Fixed::operator=(const Fixed &rhs) {
 	if (this == &rhs)
@@ -112,8 +104,6 @@ Fixed	Fixed::operator*(const Fixed &fixed) const {
 Fixed	Fixed::operator/(const Fixed &fixed) const {
 	return (Fixed(this->toFloat() / fixed.toFloat()));
 }
-
-// ==================== INCREMENT/DECREMENT ====================
 
 Fixed	Fixed::operator++(int) {
 	Fixed	tmp;
