@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:22:53 by chtan             #+#    #+#             */
-/*   Updated: 2025/02/18 18:25:02 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/20 14:02:59 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,25 @@
 int main( void ) {
     Fixed a;
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
+    std::cout << a << std::endl;        // 0
+    std::cout << ++a << std::endl;      // 0.00390625
+    std::cout << a << std::endl;        // 0.00390625
+    std::cout << a++ << std::endl;      // 0.00390625
+    std::cout << a << std::endl;        // 0.0078125
+    std::cout << b << std::endl;        // 10.1016   
     std::cout << Fixed::max( a, b ) << std::endl;
     return 0;
 }
+
+//result
+// 0
+// 0.00390625
+// 0.00390625
+// 0.00390625
+// 0.0078125
+// 10.1016
+// 10.1016
+
 // int	main(void) {
 // 	std::cout << std::endl;
 // 	std::cout << "=== SUBJECT TESTS ===" << std::endl;

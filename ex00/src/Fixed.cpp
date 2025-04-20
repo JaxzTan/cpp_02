@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 18:03:20 by chtan             #+#    #+#             */
-/*   Updated: 2025/04/19 00:54:15 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/20 14:28:23 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 // default constructor
 Fixed::Fixed(void) {
-	std::cout << GREEN_H << "Default constructor called" << RESET_H <<std::endl;
+	std::cout << GREEN_H << "Default constructor called" << RESET_H << std::endl;
     setRawBits(0);
 	return ;
 }
 
-// copy constructor
+// // copy constructor
 Fixed::Fixed(const Fixed &tocopy) : _rawBits(tocopy._rawBits) {
-	std::cout << GREEN_H << "Copy constructor called" << RESET_H <<std::endl;
-	return ;
+	std::cout << GREEN_H << "Copy constructor called" << RESET_H << std::endl;
 }
 
 // Fixed::Fixed(const Fixed &toCopy) {
@@ -32,7 +31,7 @@ Fixed::Fixed(const Fixed &tocopy) : _rawBits(tocopy._rawBits) {
 // }
 
 // copy assignment operator
-// Checks if this != &rhs (not self-assigning)
+// Checks if this != &rhs (not self-assigning) and avoid self assigement. prevent potential memory leaks
 Fixed &Fixed::operator=(const Fixed &rhs) {
 	std::cout << GREEN_H << "Copy assignment operator called" << RESET_H <<std::endl;
 	if (this == &rhs)
