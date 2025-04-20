@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 14:40:13 by chtan             #+#    #+#             */
-/*   Updated: 2025/04/18 22:34:08 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/20 14:35:48 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ std::cout << "a is " << BLUE_H << a << RESET_H << std::endl;
 std::cout << "b is " << BLUE_H << b << RESET_H << std::endl;
 std::cout << "c is " << BLUE_H << c << RESET_H << std::endl;
 std::cout << "d is " << BLUE_H << d << RESET_H << std::endl;
-std::cout << YELLOW_H << "a is " << RESET_H << a.toInt() << " as integer" << std::endl;
-std::cout << YELLOW_H << "b is " << RESET_H << b.toInt() << " as integer" << std::endl;
-std::cout << YELLOW_H << "c is " << RESET_H << c.toInt() << " as integer" << std::endl;
-std::cout << YELLOW_H << "d is " << RESET_H << d.toInt() << " as integer" << std::endl;
+std::cout << "a is " << YELLOW_H << a.toInt() << RESET_H << " as integer" << std::endl;
+std::cout << "b is " << YELLOW_H << b.toInt() << RESET_H << " as integer" << std::endl;
+std::cout << "c is " << YELLOW_H << c.toInt() << RESET_H << " as integer" << std::endl;
+std::cout << "d is " << YELLOW_H << d.toInt() << RESET_H << " as integer" << std::endl;
 return 0;
 }
