@@ -6,7 +6,7 @@
 /*   By: chtan <chtan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:08:02 by chtan             #+#    #+#             */
-/*   Updated: 2025/04/17 00:02:27 by chtan            ###   ########.fr       */
+/*   Updated: 2025/04/21 18:12:46 by chtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	Fixed::toInt(void) const {
 	return (this->_rawBits / (1 << this->_fractBits));
 }
 
+//static_cast is used to convert the fixed-point number to a float
+// The fixed-point number is divided by 2^_fractBits to get the float value
 float	Fixed::toFloat(void) const {
 	return static_cast<float>(this->_rawBits) / (1 << this->_fractBits);
 }
